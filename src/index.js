@@ -1,18 +1,16 @@
-import React, { useState } from 'react'
-import ModalComponent from './modal'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import ExampleComponent from './App'
+import reportWebVitals from './reportWebVitals'
 
-export const ExampleComponent = () => {
-  const [open, setOpen] = useState(false)
-  const handleClose = () => {
-    setOpen(false)
-  }
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <ExampleComponent />
+  </React.StrictMode>
+)
 
-  return (
-    <>
-      <ModalComponent open={open} onClose={handleClose}>
-        texte
-      </ModalComponent>
-      <button onClick={() => setOpen(true)}>open</button>
-    </>
-  )
-}
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals()
