@@ -5,11 +5,9 @@ const ModalComponent = ({
   open = false,
   onClose = () => {},
   closeText = 'x',
-  spinnerElement = <div className={styles.spinner}></div>,
-  showSpinner = true,
-  fadeDuration = '250',
-  fadeDelay = '0',
-  opacityBackground = '0.7',
+  fadeDuration = 250,
+  fadeDelay = 0,
+  opacityBackground = 0.7,
   children
 }) => {
   const [display, setDisplay] = useState('none')
@@ -34,12 +32,15 @@ const ModalComponent = ({
 
   return (
     <>
-      {spinnerElement}
       <div className={`${styles.modal} ${animationClass}`} style={styleG}>
         <div className={styles.modalBox}>
-          <div className={styles.modalBoxClose} onClick={onClose}>
+          <button
+            title='close'
+            className={styles.modalBoxClose}
+            onClick={onClose}
+          >
             {closeText}
-          </div>
+          </button>
           {children}
         </div>
       </div>
