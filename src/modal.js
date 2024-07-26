@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './styles.module.css'
+import styles from './styles.module.css'
 
 const ModalComponent = ({
   open = false,
@@ -26,56 +26,24 @@ const ModalComponent = ({
   useEffect(() => {
     if (open === true) {
       setDisplay('block')
-      setAnimationClass('fade-in')
+      setAnimationClass(styles.fadeIn)
     } else {
-      setAnimationClass('fade-out')
-      setTimeout(() => setDisplay('none'), parseInt(fadeDuration))
+      setAnimationClass('')
+      setTimeout(() => setDisplay('none'))
     }
   }, [open])
 
   const styleG = {
     display,
-    zIndex: 1,
-    position: 'fixed',
-    left: 0,
-    top: 0,
-    overflow: 'auto',
-    width: '100%',
-    height: '100%',
-    backgroundColor: 'rgba(0, 0, 0,' + opacityBackground + ')'
-  }
-
-  const styleModal = {
-    display: 'block',
-    position: 'relative',
-    margin: '15% auto',
-    padding: '20px 30px',
-    backgroundColor: 'white',
-    borderRadius: '10px',
-    textAlign: textAlign,
-    width: '40%',
-    boxShadow: '0px 0px 22px 3px #000000'
-  }
-
-  const styleButton = {
-    position: 'absolute',
-    top: '-12px',
-    right: '-12px',
-    borderRadius: '50%',
-    backgroundColor: 'black',
-    color: 'white',
-    height: '25px',
-    width: '25px',
-    lineHeight: '25px',
-    textAlign: 'center',
-    fontWeight: 300,
-    fontFamily: 'Arial'
+    '--fade-duration': `${fadeDuration}ms`,
+    '--fade-delay': `${fadeDelay}ms`,
+    '--background-Color': 'rgba(0, 0, 0,' + opacityBackground + ')'
   }
 
   return (
-    <div className={`modal ${animationClass}`} style={styleG}>
-      <div style={styleModal}>
-        <div style={styleButton} onClick={onClose}>
+    <div className={`${styles.modal} ${animationClass}`} style={styleG}>
+      <div className={styles.modalBox}>
+        <div className={styles.modalBoxClose} onClick={onClose}>
           {closeText}
         </div>
         {children}
