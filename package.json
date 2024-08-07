@@ -1,7 +1,7 @@
 {
-  "name": "modal-react",
-  "version": "0.1.0",
-  "private": true,
+  "name": "modal-react-cc",
+  "version": "0.1.2",
+  "description": "modal for react",
   "source": "src/index-lib.js",
   "main": "dist/main.js",
   "module": "dist/module.js",
@@ -31,6 +31,8 @@
       "last 1 safari version"
     ]
   },
+  "author": "Coline Cantelou",
+  "license": "ISC",
   "devDependencies": {
     "parcel": "^2.12.0",
     "prettier": "3.3.3",
