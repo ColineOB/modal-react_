@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 const ModalComponent = ({
   open = false,
   onClose = () => {},
-  closeText = 'x',
+  closeText = '✖',
   fadeDuration = 250,
   fadeDelay = 0,
   opacityBackground = 0.7,

@@ -46,11 +46,16 @@
   color: white;
   height: 25px;
   width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 25px;
   text-align: center;
   font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
+  padding: 0;
+  border: none;
 }
 
 .spinner {

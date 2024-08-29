@@ -1,9 +1,10 @@
 {
   "name": "modal-react-cc",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "modal for react",
   "source": "src/index-lib.js",
-  "main": "dist/module.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
