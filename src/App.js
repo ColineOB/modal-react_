@@ -7,14 +7,10 @@ function ExampleComponent() {
     setOpen(false)
   }
 
-  useEffect(() => {
-    console.log(open)
-  }, [open])
-
   return (
     <>
       <ModalComponent open={open} onClose={handleClose}>
-        texte
+        text
       </ModalComponent>
       <button onClick={() => setOpen(true)}>open</button>
     </>

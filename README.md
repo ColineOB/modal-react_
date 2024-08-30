@@ -26,10 +26,10 @@ function ExampleComponent() {
       <ModalComponent open={open}
       onClose={handleClose}
       closeText= 'F'
-      fadeDuration= 120
-      fadeDelay = 100
-      opacityBackground = 0.5>
-        texte
+      fadeDuration= {120}
+      fadeDelay = {100}
+      opacityBackground = {0.5}>
+        text
       </ModalComponent>
       <button onClick={() => setOpen(true)}>open</button>
     </>

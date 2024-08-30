@@ -1,6 +1,6 @@
 {
   "name": "modal-react-cc",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "modal for react",
   "source": "src/index-lib.js",
   "main": "dist/main.js",
