@@ -9,6 +9,14 @@ You can install the library via npm:
 
 **npm install modal-react-cc**
 
+## Prerequisites
+
+Before using modal-react-cc, ensure that your project meets the following requirements:
+
+- React version: 18.3.1 or higher
+- Node.js version: 20.10.0 or higher
+- npm version: 10.2.5 or higher
+
 ## Usage/Examples
 
 ```javascript
